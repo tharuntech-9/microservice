@@ -19,12 +19,6 @@ spring:
         - Path=/pharmacyservice/**
         filters:
         - RewritePath=/pharmacyservice(?<segment>/?.*),$\{segment}
-      - id: insurance_route
-        uri: lb:http://INSURANCE-SERVICE
-        predicates:
-        - Path=/insuranceservice/**
-        filters:
-        - RewritePath=/insuranceservice(?<segment>/?.*),$\{segment}
         
 eureka:
   client:
